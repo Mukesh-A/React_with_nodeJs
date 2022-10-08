@@ -9,7 +9,7 @@ const AddUserData = () => {
   function saveUser() {
     console.log({name, email, mobile});
     let data = {name, email, mobile}
-    fetch("http://localhost:4000/todo",{
+    fetch("",{
         method:'POST',
         headers:{
             'Accept':'application/json',
