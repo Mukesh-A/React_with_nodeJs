@@ -2,11 +2,14 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import AddUserData from "./AddUserData";
 import PreFilled from "./PreFilled";
+import Users from "./Users";
 
 function App() {
 
   //PREV STATE
   const [count, setCount] = useState(1)
+
+  const [counts, setCounts] = useState(0);
 
   function updateCount(){
     let rand = Math.floor(Math.random(1)*10)
@@ -33,7 +36,10 @@ function App() {
   <PreFilled/> */}
 
   <h1>{count}</h1>
-  <button onClick={updateCount}>Click me</button>
+  {/* <button onClick={updateCount}>Click me</button> */}
+
+
+  <Users counter={counts}/>
   </div>;
 }
 
